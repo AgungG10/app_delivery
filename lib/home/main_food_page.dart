@@ -1,4 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:app_delivery/home/food_page_body.dart';
 import 'package:app_delivery/utils/colors.dart';
+import 'package:app_delivery/widgets/big_text.dart';
+import 'package:app_delivery/widgets/small_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -24,8 +29,13 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 children: [
                   Column(
                     children: [
-                      Text("negara"),
-                      Text("kota"),
+                      BigText(text: "Indonesia", color: AppColors.mainColor),
+                      Row(
+                        children: [
+                          SmallText(text: "Jawa Barat", color: Colors.black54),
+                          Icon(Icons.arrow_drop_down_rounded)
+                        ],
+                      )
                     ],
                   ),
                   Center(
@@ -43,6 +53,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
               ),
             ),
           ),
+          FoodPageBody(),
         ],
       ),
     );
